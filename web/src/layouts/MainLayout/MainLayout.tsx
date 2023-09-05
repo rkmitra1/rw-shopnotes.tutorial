@@ -22,7 +22,7 @@ const MainLayout = ({ children }: ShopNoteLayoutProps) => {
           </div>
           <h1 className="text-xl">
             <Link to={routes.home()} className="text-blue-100">
-              ShopNotes Tutorial
+              ShopNotes Application Development Tutorial (RedwoodJS)
             </Link>
           </h1>
         </div>

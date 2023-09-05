@@ -92,9 +92,11 @@ const pageName = [
 
 const TableOfContents = ({ ids }) => {
   return (
-    <div className="mx-auto mt-4 w-3/4 rounded-2xl border-2 bg-gray-100 p-4">
-      <div className="pb-2 text-2xl font-bold">Table of Contents</div>
-      <ul className="prose list-disc px-4 px-8">
+    <div className="mx-2 mt-4 rounded-2xl border-2 bg-gray-100 p-4 md:mx-0 md:mx-auto md:w-3/4">
+      <div className="pb-2 text-base font-bold md:text-2xl">
+        Table of Contents
+      </div>
+      <ul className="prose list-disc px-4 px-8 text-xs md:text-base">
         {ids.map((id, index) => (
           <li key={id}>
             <a href={`#${id[0]}`}>
@@ -124,11 +126,15 @@ const HomePage = () => {
 
       {h2Ids && <TableOfContents ids={h2Ids} />}
 
+      {/* // these are here so tailwind will add the styles to the build. They are included in the markdown */}
       <p className="-ml-4 ml-8 flex grid w-12 grid-cols-2 flex-row rounded-t-md rounded-t-md bg-blue-400 bg-gray-300 text-center text-red-500 text-white"></p>
 
       {pages.map((page, index) => (
-        <div className="m-4 rounded-2xl bg-blue-500 p-4" key={'page' + index}>
-          <div className="prose mx-auto w-3/4 max-w-none rounded-2xl bg-white px-4 pb-4">
+        <div
+          className="m-1 rounded-2xl bg-blue-500 p-4 md:m-4"
+          key={'page' + index}
+        >
+          <div className="prose mx-auto max-w-none rounded-2xl bg-white px-4 pb-4 text-xs md:w-3/4 md:text-base">
             <Markdown
               options={{
                 overrides: {
