@@ -65,12 +65,19 @@ const pageName = [
   'page22',
 ]
 
-const pages = await Promise.all(
-  pageName.map(async (page) => {
-    const pagecontent = await import(`./${page}.md?raw`)
-    return pagecontent.default
-  })
-)
+// const pages = await Promise.all(
+//   pageName.map(async (page) => {
+//     const pagecontent = await import(`./${page}.md?raw`)
+//     return pagecontent.default
+//   })
+// )
+
+async function loadPageContent(page: string) {
+  const pagecontent = await import(`./${page}.md?&raw`)
+  return pagecontent.default
+}
+
+const pages = await Promise.all(pageName.map(loadPageContent))
 
 const TableOfContents = ({ ids }) => {
   return (
