@@ -77,7 +77,12 @@ async function loadPageContent(page: string) {
   return pagecontent.default
 }
 
-const pages = await Promise.all(pageName.map(loadPageContent))
+async function loadPages() {
+  const pages = await Promise.all(pageName.map(loadPageContent))
+  return pages
+}
+
+const pages = await loadPages()
 
 const TableOfContents = ({ ids }) => {
   return (
