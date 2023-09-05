@@ -10,53 +10,53 @@ import Markdown from 'markdown-to-jsx'
 import { MetaTags } from '@redwoodjs/web'
 
 // NOTE: REFACTORED TO DO THIS THE DUMB WAY BECAUSE NETLIFY DOESN'T SUPPPORT TOP-LEVEL AWAIT
-import page1 from './page1.md?raw'
-import page10 from './page10.md?raw'
-import page11 from './page11.md?raw'
-import page12 from './page12.md?raw'
-import page13 from './page13.md?raw'
-import page14 from './page14.md?raw'
-import page15 from './page15.md?raw'
-import page16 from './page16.md?raw'
-import page17 from './page17.md?raw'
-import page18 from './page18.md?raw'
-import page19 from './page19.md?raw'
-import page2 from './page2.md?raw'
-import page20 from './page20.md?raw'
-import page21 from './page21.md?raw'
-import page22 from './page22.md?raw'
-import page3 from './page3.md?raw'
-import page4 from './page4.md?raw'
-import page5 from './page5.md?raw'
-import page6 from './page6.md?raw'
-import page7 from './page7.md?raw'
-import page8 from './page8.md?raw'
-import page9 from './page9.md?raw'
+// import page1 from './page1.md?raw'
+// import page10 from './page10.md?raw'
+// import page11 from './page11.md?raw'
+// import page12 from './page12.md?raw'
+// import page13 from './page13.md?raw'
+// import page14 from './page14.md?raw'
+// import page15 from './page15.md?raw'
+// import page16 from './page16.md?raw'
+// import page17 from './page17.md?raw'
+// import page18 from './page18.md?raw'
+// import page19 from './page19.md?raw'
+// import page2 from './page2.md?raw'
+// import page20 from './page20.md?raw'
+// import page21 from './page21.md?raw'
+// import page22 from './page22.md?raw'
+// import page3 from './page3.md?raw'
+// import page4 from './page4.md?raw'
+// import page5 from './page5.md?raw'
+// import page6 from './page6.md?raw'
+// import page7 from './page7.md?raw'
+// import page8 from './page8.md?raw'
+// import page9 from './page9.md?raw'
 
-const pages = [
-  page1,
-  page2,
-  page3,
-  page4,
-  page5,
-  page6,
-  page7,
-  page8,
-  page9,
-  page10,
-  page11,
-  page12,
-  page13,
-  page14,
-  page15,
-  page16,
-  page17,
-  page18,
-  page19,
-  page20,
-  page21,
-  page22,
-]
+// const pages = [
+//   page1,
+//   page2,
+//   page3,
+//   page4,
+//   page5,
+//   page6,
+//   page7,
+//   page8,
+//   page9,
+//   page10,
+//   page11,
+//   page12,
+//   page13,
+//   page14,
+//   page15,
+//   page16,
+//   page17,
+//   page18,
+//   page19,
+//   page20,
+//   page21,
+//   page22,
+// ]
 
 const pageName = [
   'page1',
@@ -83,12 +83,13 @@ const pageName = [
   'page22',
 ]
 
-// const pages = await Promise.all(
-//   pageName.map(async (page) => {
-//     const pagecontent = await import(`./${page}.md?raw`)
-//     return pagecontent.default
-//   })
-// )
+// try after reconfigure vite.config.js
+const pages = await Promise.all(
+  pageName.map(async (page) => {
+    const pagecontent = await import(`./${page}.md?raw`)
+    return pagecontent.default
+  })
+)
 
 const TableOfContents = ({ ids }) => {
   return (

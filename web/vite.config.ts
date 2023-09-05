@@ -9,6 +9,9 @@ dns.setDefaultResultOrder('verbatim')
 import redwood from '@redwoodjs/vite'
 
 const viteConfig: UserConfig = {
+  build: {
+    target: 'esnext',
+  },
   plugins: [redwood()],
 }
 
