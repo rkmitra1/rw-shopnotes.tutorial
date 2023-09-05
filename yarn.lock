@@ -3897,6 +3897,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.18":
+  version: 2.0.18
+  resolution: "@heroicons/react@npm:2.0.18"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 3cef7f67c65f8b00dc4f23788e468e661a24bd805f80e3b5514a986d69c91ef05407cf50078691573eced47147db87a9bd00cc165e4fecd2a9657cbaf3eaafb5
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -7324,6 +7333,20 @@ __metadata:
   dependencies:
     defer-to-connect: ^1.0.1
   checksum: 0594140e027ce4e98970c6d176457fcbff80900b1b3101ac0d08628ca6d21d70e0b94c6aaada94d4f76c1423fcc7195af83da145ce0fd556fc0595ca74a17b8b
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/typography@npm:^0.5.9":
+  version: 0.5.9
+  resolution: "@tailwindcss/typography@npm:0.5.9"
+  dependencies:
+    lodash.castarray: ^4.4.0
+    lodash.isplainobject: ^4.0.6
+    lodash.merge: ^4.6.2
+    postcss-selector-parser: 6.0.10
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 9342019c287407f4c0b60aaa31c0c7a2b43f6ff6455ce6bbd03a9a00ad093ae81d0ad405a9fd90d6213b2021854de9b5cc28f93fc240ea2a962cd987a85241a8
   languageName: node
   linkType: hard
 
@@ -17683,6 +17706,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.castarray@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.castarray@npm:4.4.0"
+  checksum: 0bf523ad1596a5bf17869ba047235b4453eee927005013ae152345e2b291b81a02e7f2b7c38f876a1d16f73c34aa3c3241e965193e5b31595035bc8f330c4358
+  languageName: node
+  linkType: hard
+
 "lodash.chunk@npm:^4.2.0":
   version: 4.2.0
   resolution: "lodash.chunk@npm:4.2.0"
@@ -20271,6 +20301,16 @@ __metadata:
   peerDependencies:
     postcss: ^8.2.15
   checksum: 6da900d22dd8760b8a2ace32013036e3c4c4d9d560c31255eceea54563e3ddb2ca830bc9072fe2a1abacb8c48a008656887fc2f6ba1873e590342ad8e6bc269d
+  languageName: node
+  linkType: hard
+
+"postcss-selector-parser@npm:6.0.10":
+  version: 6.0.10
+  resolution: "postcss-selector-parser@npm:6.0.10"
+  dependencies:
+    cssesc: ^3.0.0
+    util-deprecate: ^1.0.2
+  checksum: a0b27c5e3f7604c8dc7cd83f145fdd7b21448e0d86072da99e0d78e536ba27aa9db2d42024c50aa530408ee517c4bdc0260529e1afb56608f9a82e839c207e82
   languageName: node
   linkType: hard
 
@@ -23880,11 +23920,11 @@ __metadata:
 
 "typescript@patch:typescript@5.1.6#~builtin<compat/typescript>":
   version: 5.1.6
-  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
+  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=77c9e2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: c2bded58ab897a8341fdbb0c1d92ea2362f498cfffebdc8a529d03e15ea2454142dfbf122dabbd9a5cb79b7123790d27def16e11844887d20636226773ed329a
+  checksum: c134abcd9fc5c393db30498db18d8e89453efae14e11a39c1adb6238138d4c152472e497499b8a67b0c87ca6eafcb26b0eb02f962f240c233c2e0ad3785f8742
   languageName: node
   linkType: hard
 
@@ -24594,10 +24634,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
+    "@heroicons/react": ^2.0.18
     "@redwoodjs/forms": 6.1.0
     "@redwoodjs/router": 6.1.0
     "@redwoodjs/vite": 6.1.0
     "@redwoodjs/web": 6.1.0
+    "@tailwindcss/typography": ^0.5.9
     autoprefixer: ^10.4.15
     postcss: ^8.4.29
     postcss-loader: ^7.3.3

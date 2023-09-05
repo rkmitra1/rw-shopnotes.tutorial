@@ -11,9 +11,11 @@
     ]
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "@redwoodjs/forms": "6.1.0",
     "@redwoodjs/router": "6.1.0",
     "@redwoodjs/web": "6.1.0",
+    "@tailwindcss/typography": "^0.5.9",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
