@@ -81,6 +81,8 @@ const pageName = [
   'page20',
   'page21',
   'page22',
+  'page23',
+  'page24',
 ]
 
 // try after reconfigure vite.config.js
